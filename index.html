@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="pokemon">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<meta charset="utf-8">
+	<title>pokemon</title>
+   
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-controller="pokedex">
+
+	<div class="cuadro" ng-repeat="poke in pokedexB">
+		<p>{{poke.data.name}}</p>
+	</div>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	
+
+	<script src="js/script.js"></script>
+
+</body>
+</html>
