@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en"  ng-app="pokemon">
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+	<!--bosststrap.css -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<meta charset="utf-8">
 	<title>pokemon</title>
-   
-     <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body ng-controller="pokedex">
 
-	<div class="cuadro" ng-repeat="poke in pokedexB">
-		<p>{{poke.data.name}}</p>
-	</div>
-
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	
-
-	<script src="js/script.js"></script>
+      <div class="container-fluid  navbar">
+      	<div class="row altoTotal">
+      		<div class="col-md-12  vCenter altoTotal">
+      			<span class="titulo ">Pokedex</span>
+      		</div>	
+      	</div>
+            <!--01111001 01110101 01101100 01100101 01101001 01110011 01111001-->
+      </div>
+      <div class="container-fluid">
+      	<div class="row ">
+      		<div class="col-md-3 pad " ng-repeat="p in pokedexB">
+      			<div class="pokeinfo">
+      				<div>
+      				 <img class="img-responsive imgPoke" src="{{p.data.sprites.front_default}}" alt="pokemon"></div>
+      				<div class="namepoke">
+      					Pokemon:
+                                    {{ p.data.name }}
+                              </div>
+      			</div>
+      		</div>	
+      	</div>
+      </div>
+            
+   
+<!--jQuery.js-->
+	 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+     <script src="script.js"></script>
 
 </body>
 </html>
